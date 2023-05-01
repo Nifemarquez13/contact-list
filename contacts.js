@@ -61,6 +61,14 @@ deleteContacts("Laura", "Muñoz");
 
 console.log(Contacts);
 
+const updateContacts = (name, lastname, telephone)=>{
+    let posContacts = Contacts.findIndex((Contact)=>Contact.names==name&&Contact.lastname==lastname);
+if(posContacts!=-1) {
+Contacts[posContacts].telephone=telephone;
+}
+}
+
+updateContacts("Ana", "Ospina Rojas", 3145678909);
 
 function showContacts() {
 
